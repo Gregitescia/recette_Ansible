@@ -3,6 +3,12 @@
   become: yes
   vars_files:
     - vars/main.yml
+
+  pre_tasks:
+    - name: création du documentroot
+      file: path="{{item.documentroot}}" state=directory
+      loop: "{{apache_vhosts}}"     
+      
   roles:
     - { role: geerlingguy.apache }
 

@@ -20,7 +20,7 @@
 - name: création d'un utilisateur
   user:
           name: "{{item.name}}"
-          password: "{{item.password}}"
+          password: "{{item.password}}" 
           createhome: yes
   loop: "{{users}}"
 
