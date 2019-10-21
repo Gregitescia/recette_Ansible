@@ -1,20 +1,20 @@
 ---
-- name: Groupe itescia 
-  group:
-    name: itesciadmin
-    gid: 1001
-    state: present
+# - name: Groupe itescia 
+  # group:
+    # name: itesciadmin
+    # gid: 1001
+    # state: present
     
-- name: user itesciadmin
-  user:
-    name: itesciadmin
-    home: /home/itesciadmin
-    uid: 1001
-    groups: itesciadmin,sudo
-    #    group: itesciadmin
-    #    groups: itescia,sudo
-    password: ''
-    state: present
+# - name: user itesciadmin
+  # user:
+    # name: itesciadmin
+    # home: /home/itesciadmin
+    # uid: 1001
+    # groups: itesciadmin,sudo
+    # #    group: itesciadmin
+    # #    groups: itescia,sudo
+    # password: ''
+    # state: present
 
 
 - name: création d'un utilisateur
@@ -28,11 +28,11 @@
 - name: authorized key
   authorized_key: 
     user: itesciadmin
-    key: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC0bexFWKGiq3Hr25wQO392dySU2d9etwIArcUKZB7oO7d6OqmQk8NEc6JgQmI5JsC56BK/H7sBCweKlK0Q19VE2To8eQFNfNJwR0E5QmVm5SY10QxVY/u4EOPwqiByRtGmt7GGyqxMrAmF+pWMC6/Nsyykk2LSQ56zuwJeOlyv2a8Hm3cMWNiW4xBAIVj2lOTRqhF5CG35rgg3m/oWK3iZlOKgNdC96YCySkRMAoeRKFeEwny62JJHuUCDkbto89BfZijqN4Ea0NdaWhGUUTWn0NSVx2Ymu5TJbEJ+tgssE12qy43/Aly7LqIDZDPnWWyiHve+yWynXBgFzYJ+PCXj root@srv-1'
+    key: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC2f6MQuKEqzDAGyKNP1o+Qfb4SSSKw+BmZWbyhkMkouPAY/MnEet8IFav+Nz3hgYBauo2wvHQ0ElzO1aa57fboL0r2aTHZcGMZAAPQnZu8CSP1+9yuXzmJNmXVkYn8ohjMZbsfhF5QLnq7okv9c9ZQiePvrOa1/FUgKq03d8gHagmCXp0oU37VG7Gg1Och2P0qwbVDRfXhR8P9LV4/ZFmXGsMFEVqjhqPMgC15Sdtuurwz1WdcFrQyqU1YtxwyKQZgWoruEpE3sl9QgG+fI6TutB5hoMYHRuepyAmTefAAqm42buI0FeamkWVtp7/+8ixoSOb/JNabYQXHFm5Hehbv itescia@master'
     state: present
 
-- name: "supression d'un utilisateur"
-  user:
-          name: ites
-          state: absent
-          remove: yes
+#- name: "supression d'un utilisateur"
+#  user:
+          # name: ites
+          # state: absent
+          # remove: yes

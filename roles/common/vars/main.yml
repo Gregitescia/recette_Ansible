@@ -4,13 +4,13 @@ packages:
         - git
         - sshpass
  
-users: 
-        - name: test
-          password: test
-        - name: test2
-          password: test2
-        - name: test3
-          password: test3
+#users: 
+ #       - name: test
+ #        password: test
+ #      - name: test2
+ #        password: test2
+ #      - name: test3
+ #         password: test3
 users: 
         - name: client1
           password: client1
