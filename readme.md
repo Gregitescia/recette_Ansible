@@ -157,13 +157,49 @@ Voir dans :  /etc/apache2/sites-available/vhosts.conf  et dans /var/www/vhosts
 
 Master / Slave
 
-vim /etc/mysql/my.cnf
-blind-adress = 172.16.203.204
-CREATE USER "slave"@"172.16.203.85" IDENTIFIED BY "< itescia >" ;
+Master / Slave
 
+Modifier mysql.yml
 
-Grant replication slave on *.* to "slave"@"ip address" ;
-FLUSH PRIVILEGES ;
+---
+- hosts: all
+  become: yes
+  vars_files:
+    - vars/main.yml
+  roles:
+    - role: geerlingguy.mysql
+    - role: ome.mysql_backup
+      mysql_backup_dir: /var/backups/database
+      mysql_backup_filename_format: "db_itescia-%Y%m%d.mysqldump"
+      mysql_backup_minimum_expected_size: 100000
+
+- hosts: 172.16.203.204
+  become: yes
+  vars_files:
+    - vars/main.yml
+  roles:
+    - role: geerlingguy.mysql
+      mysql_server_id: "1"
+      mysql_max_binlog_size: "100M"
+      mysql_binlog_format: "ROW"
+      mysql_expire_logs_days: "10"
+      mysql_replication_role: 'master'
+      mysql_replication_master: '172.16.203.204'
+      mysql_replication_user: {itescia}
+
+- hosts: 172.16.203.85
+  become: yes
+  vars_files:
+    - vars/main.yml
+  roles:
+    - role: geerlingguy.mysql
+      mysql_server_id: "2"
+      mysql_max_binlog_size: "100M"
+      mysql_binlog_format: "ROW"
+      mysql_expire_logs_days: "10"
+      mysql_replication_role: 'slave'
+      mysql_replication_master: '172.16.203.204'
+      mysql_replication_user: {itescia}
 
 Sauvegarde et backup des bdd
 
