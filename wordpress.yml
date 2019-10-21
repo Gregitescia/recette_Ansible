@@ -10,7 +10,7 @@
         dbpass: 'itescia'
         dbhost: 172.16.203.204
         path: /var/www
-        url: http://master
+        url: http://client1
         title: wordpress
         admin_name: itescia
         admin_email: itescia@localhost.localdomain
@@ -33,7 +33,7 @@
         dbpass: 'itescia'
         dbhost: 172.16.203.204
         path: /var/www
-        url: http://master
+        url: http://client2
         title: wordpress
         admin_name: itescia
         admin_email: itescia@localhost.localdomain
@@ -56,7 +56,7 @@
         dbpass: 'itescia'
         dbhost: 172.16.203.204
         path: /var/www
-        url: http://master
+        url: http://client3
         title: wordpress
         admin_name: itescia
         admin_email: itescia@localhost.localdomain
