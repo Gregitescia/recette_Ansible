@@ -7,4 +7,7 @@
 #
 #role apache from galaxy
 - src : geerlingguy.apache
+#
+#role wordpress from galaxy
+- src : oefenweb.wordpress
  
