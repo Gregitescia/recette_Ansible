@@ -5,7 +5,7 @@
 172.16.203.85 slave
 
 [backup]
-12.16.203.41
+12.16.203.41 backup
 
 [all:vars]
 ansible_user=root
