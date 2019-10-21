@@ -1,20 +1,20 @@
 ---
-- name: Groupe itescia 
-  group:
-    name: itesciadmin
-    gid: 1001
-    state: present
+# - name: Groupe itescia 
+  # group:
+    # name: itesciadmin
+    # gid: 1001
+    # state: present
     
-- name: user itesciadmin
-  user:
-    name: itesciadmin
-    home: /home/itesciadmin
-    uid: 1001
-    groups: itesciadmin,sudo
-    #    group: itesciadmin
-    #    groups: itescia,sudo
-    password: ''
-    state: present
+# - name: user itesciadmin
+  # user:
+    # name: itesciadmin
+    # home: /home/itesciadmin
+    # uid: 1001
+    # groups: itesciadmin,sudo
+    # #    group: itesciadmin
+    # #    groups: itescia,sudo
+    # password: ''
+    # state: present
 
 
 - name: création d'un utilisateur
@@ -31,8 +31,8 @@
     key: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC2f6MQuKEqzDAGyKNP1o+Qfb4SSSKw+BmZWbyhkMkouPAY/MnEet8IFav+Nz3hgYBauo2wvHQ0ElzO1aa57fboL0r2aTHZcGMZAAPQnZu8CSP1+9yuXzmJNmXVkYn8ohjMZbsfhF5QLnq7okv9c9ZQiePvrOa1/FUgKq03d8gHagmCXp0oU37VG7Gg1Och2P0qwbVDRfXhR8P9LV4/ZFmXGsMFEVqjhqPMgC15Sdtuurwz1WdcFrQyqU1YtxwyKQZgWoruEpE3sl9QgG+fI6TutB5hoMYHRuepyAmTefAAqm42buI0FeamkWVtp7/+8ixoSOb/JNabYQXHFm5Hehbv itescia@master'
     state: present
 
-- name: "supression d'un utilisateur"
-  user:
-          name: ites
-          state: absent
-          remove: yes
+#- name: "supression d'un utilisateur"
+#  user:
+          # name: ites
+          # state: absent
+          # remove: yes
