@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: 172.16.203.204
   become: yes
   vars_files:
     - vars/main.yml
