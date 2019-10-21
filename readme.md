@@ -152,6 +152,9 @@ apache_listen_port: 8080
 apache_vhosts:
   - {servername: "www.client1.com", documentroot: "/var/www/vhosts/srv_client1"}
 
+
+Voir dans :  /etc/apache2/sites-available/vhosts.conf  et dans /var/www/vhosts
+
 Master / Slave
 
 vim /etc/mysql/my.cnf
