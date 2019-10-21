@@ -7,14 +7,60 @@
       - name: wordpress
         dbname: client1
         dbuser: client1
-        dbpass: 'heCrE7*d2KEs'
-        dbhost: localhost
+        dbpass: 'itescia'
+        dbhost: 172.16.203.204
         path: /var/www
-        url: http://localhost
+        url: http://master
         title: wordpress
-        admin_name: admin
-        admin_email: root@localhost.localdomain
-        admin_password: 'tuFr8=aPra@a'
+        admin_name: itescia
+        admin_email: itescia@localhost.localdomain
+        admin_password: 'itescia'
+        themes:
+          - name: twentytwelve
+            activate: true
+          - name: twentythirteen
+        plugins:
+          - name: contact-form-7
+            activate: false
+          - name: simple-fields
+        users: {}
+        options: []
+        queries: []
+        
+      - name: wordpress
+        dbname: client2
+        dbuser: client2
+        dbpass: 'itescia'
+        dbhost: 172.16.203.204
+        path: /var/www
+        url: http://master
+        title: wordpress
+        admin_name: itescia
+        admin_email: itescia@localhost.localdomain
+        admin_password: 'itescia'
+        themes:
+          - name: twentytwelve
+            activate: true
+          - name: twentythirteen
+        plugins:
+          - name: contact-form-7
+            activate: false
+          - name: simple-fields
+        users: {}
+        options: []
+        queries: []
+        
+      - name: wordpress
+        dbname: client3
+        dbuser: client3
+        dbpass: 'itescia'
+        dbhost: 172.16.203.204
+        path: /var/www
+        url: http://master
+        title: wordpress
+        admin_name: itescia
+        admin_email: itescia@localhost.localdomain
+        admin_password: 'itescia'
         themes:
           - name: twentytwelve
             activate: true
