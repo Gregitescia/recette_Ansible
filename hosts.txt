@@ -1,13 +1,11 @@
-#[all]
-#database
-#web
+[master]
+172.16.203.204 master
 
-[database]
-#192.168.41.128
-192.168.28.130
+[slave]
+172.16.203.85 slave
 
-[web]
-#192.168.41.129
+[backup]
+12.16.203.41
 
 [all:vars]
 ansible_user=root
