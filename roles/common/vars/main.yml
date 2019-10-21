@@ -11,3 +11,10 @@ users:
           password: test2
         - name: test3
           password: test3
+users: 
+        - name: client1
+          password: client1
+        - name: client2
+          password: client2
+        - name: client3
+          password: client3
