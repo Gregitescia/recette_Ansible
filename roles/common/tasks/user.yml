@@ -27,10 +27,15 @@
 
 - name: authorized key
   authorized_key: 
-    user: itesciadmin
+    user: itescia
     key: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC2f6MQuKEqzDAGyKNP1o+Qfb4SSSKw+BmZWbyhkMkouPAY/MnEet8IFav+Nz3hgYBauo2wvHQ0ElzO1aa57fboL0r2aTHZcGMZAAPQnZu8CSP1+9yuXzmJNmXVkYn8ohjMZbsfhF5QLnq7okv9c9ZQiePvrOa1/FUgKq03d8gHagmCXp0oU37VG7Gg1Och2P0qwbVDRfXhR8P9LV4/ZFmXGsMFEVqjhqPMgC15Sdtuurwz1WdcFrQyqU1YtxwyKQZgWoruEpE3sl9QgG+fI6TutB5hoMYHRuepyAmTefAAqm42buI0FeamkWVtp7/+8ixoSOb/JNabYQXHFm5Hehbv itescia@master'
     state: present
 
+- name: authorized key
+  authorized_key:
+    user: root
+    key: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyN+7ps5dW5MDtftbDCvU5PUvGaHRrA9oyyfjWACe6rr6QvzygB0kPs1U1nAyXN9pyxtFQ5HV4WjN2Kz1jeaynX375pi7dUvCAyVoTAElctVyN/LriXwL11XE4J5Fg9FgP2a4TzDmQ/tKwNrwbb6hUIcC/aMmaeGrQGyTQipvgwYDE6ZNPWcMTKivXSHtNZlWUicz2p4vOye3dnTPA3csnKPygJS6i3oXyGbjll7FwRQBLaJuxo8YQRtrqNS4bjsJixBw38RouJjrAVnIlLa1DwYsB2+lkZaWkJ38tnmakh8Pd/MRvqDFluiDAZ/vuRifi0doa78Or/YHy0dxsRtMB root@master'
+    state: present
 #- name: "supression d'un utilisateur"
 #  user:
           # name: ites
