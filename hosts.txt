@@ -1,14 +1,11 @@
 [master]
-172.16.203.204 master
-192.168.41.128 master
+172.16.203.204
 
 [slave]
-172.16.203.85 slave
-192.168.35.128 slave
+172.16.203.85
 
 [backup]
-172.16.203.41 backup
-192.168.202.128 backup
+172.16.203.41
 
 [all:vars]
 ansible_user=root

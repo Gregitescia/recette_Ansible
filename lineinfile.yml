@@ -1,0 +1,13 @@
+---
+- name: ajout adresses IP dans /etc/hosts
+  lineinfile:
+    path: /etc/hosts
+    regexp: '^127\.0\.0\.1'
+    line: 127.0.0.1 localhost
+    line: 172.16.203.204 master
+    line: 192.168.41.128 master
+    line: 172.16.203.85 slave
+    line: 192.168.35.128 slave
+    line: 172.16.203.41 backup
+    line: 192.168.202.128 backup
+
